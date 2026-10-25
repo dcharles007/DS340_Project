@@ -1,0 +1,25 @@
+DS340W Group 46 — executed code check-in evidence
+
+Verified UTC: 2026-10-01T01:51:47.264221+00:00
+Python: 3.12.14
+
+Executed checks:
+python -m unittest discover -s tests -v
+Result: all 13 tests passed.
+
+Executed demo:
+python src/project.py demo --out results/demo
+Result: 63 cases covering 3 synthetic indexes and 3/5/10 observation horizons.
+Models: Toy momentum, Toy contrarian, Zero baseline, Momentum baseline.
+No live assistant was called. No actual market data was used.
+
+Executed graphs:
+python src/project.py charts --experiment results/demo
+Result: four graph types exported as PNG and SVG.
+
+SHA-256 of implementation: 9696119453ab2d7de542522081bdfd37ac79075e8f76d71218521ed2b01c6ea0
+SHA-256 of synthetic prices: c90ee477dba8aaf6eed51de1c41123938435cbbaf7b71ff3690d33afb9e4328a
+SHA-256 of toy forecasts: 7af37eb7bcb1791db0f952b86ea2971355c8d85909096b8af15764080daf8d01
+
+See REPORT.md and the case-level CSVs for reproducible demonstration results.
+A local test run is evidence of functionality, not proof of completed real-data research.

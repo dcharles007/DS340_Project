@@ -1,0 +1,2 @@
+# Optional for graphs; prompt generation and scoring use only standard Python.
+matplotlib>=3.7,<4
