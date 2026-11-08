@@ -1,0 +1,24 @@
+SP500_2026-02-27_h3
+
+Use ONLY this supplied historical closing-price table for SP500. Do not browse, search, use news, or use other market information. From the last supplied closing price, predict the percentage return to the close 3 trading observations later. Return exactly one signed number without a percent sign or explanation. Example: -0.75 means a decline of 0.75%.
+date,close
+2026-02-02,109.482812
+2026-02-03,109.151026
+2026-02-04,108.871387
+2026-02-05,108.655396
+2026-02-06,108.504814
+2026-02-09,108.412120
+2026-02-10,108.362173
+2026-02-11,108.334863
+2026-02-12,108.308424
+2026-02-13,108.262968
+2026-02-16,108.183759
+2026-02-17,108.063753
+2026-02-18,107.905002
+2026-02-19,107.718725
+2026-02-20,107.524015
+2026-02-23,107.345392
+2026-02-24,107.209583
+2026-02-25,107.141982
+2026-02-26,107.163259
+2026-02-27,107.286552

@@ -1,0 +1,9 @@
+{
+  "synthetic_demo": true,
+  "split": "test",
+  "case_count": 63,
+  "predictions_sha256": "7af37eb7bcb1791db0f952b86ea2971355c8d85909096b8af15764080daf8d01",
+  "prices_sha256": "c90ee477dba8aaf6eed51de1c41123938435cbbaf7b71ff3690d33afb9e4328a",
+  "scored_at_utc": "2026-10-01T01:50:57.638693+00:00",
+  "note": "Synthetic data and toy rules; not assistant research results."
+}

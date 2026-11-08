@@ -1,0 +1,24 @@
+DOW_2026-03-13_h10
+
+Use ONLY this supplied historical closing-price table for DOW. Do not browse, search, use news, or use other market information. From the last supplied closing price, predict the percentage return to the close 10 trading observations later. Return exactly one signed number without a percent sign or explanation. Example: -0.75 means a decline of 0.75%.
+date,close
+2026-02-16,129.834475
+2026-02-17,130.374317
+2026-02-18,130.970967
+2026-02-19,131.587958
+2026-02-20,132.185653
+2026-02-23,132.725832
+2026-02-24,133.176221
+2026-02-25,133.514338
+2026-02-26,133.730040
+2026-02-27,133.826388
+2026-03-02,133.818665
+2026-03-03,133.731715
+2026-03-04,133.596048
+2026-03-05,133.443298
+2026-03-06,133.301719
+2026-03-09,133.192333
+2026-03-10,133.126209
+2026-03-11,133.103211
+2026-03-12,133.112324
+2026-03-13,133.133529

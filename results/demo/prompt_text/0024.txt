@@ -1,0 +1,24 @@
+NASDAQ100_2025-12-19_h10
+
+Use ONLY this supplied historical closing-price table for NASDAQ100. Do not browse, search, use news, or use other market information. From the last supplied closing price, predict the percentage return to the close 10 trading observations later. Return exactly one signed number without a percent sign or explanation. Example: -0.75 means a decline of 0.75%.
+date,close
+2025-11-24,118.764070
+2025-11-25,118.728705
+2025-11-26,118.655461
+2025-11-27,118.524757
+2025-11-28,118.324307
+2025-12-01,118.051540
+2025-12-02,117.714642
+2025-12-03,117.332034
+2025-12-04,116.930402
+2025-12-05,116.541550
+2025-12-08,116.198596
+2025-12-09,115.932011
+2025-12-10,115.766048
+2025-12-11,115.715953
+2025-12-12,115.786281
+2025-12-15,115.970461
+2025-12-16,116.251663
+2025-12-17,116.604866
+2025-12-18,116.999926
+2025-12-19,117.405287

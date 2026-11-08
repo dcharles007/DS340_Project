@@ -1,0 +1,24 @@
+NASDAQ100_2026-03-13_h5
+
+Use ONLY this supplied historical closing-price table for NASDAQ100. Do not browse, search, use news, or use other market information. From the last supplied closing price, predict the percentage return to the close 5 trading observations later. Return exactly one signed number without a percent sign or explanation. Example: -0.75 means a decline of 0.75%.
+date,close
+2026-02-16,117.912531
+2026-02-17,117.856841
+2026-02-18,117.882803
+2026-02-19,118.009019
+2026-02-20,118.244925
+2026-02-23,118.589140
+2026-02-24,119.029104
+2026-02-25,119.542061
+2026-02-26,120.097311
+2026-02-27,120.659537
+2026-03-02,121.192807
+2026-03-03,121.664779
+2026-03-04,122.050519
+2026-03-05,122.335360
+2026-03-06,122.516367
+2026-03-09,122.602147
+2026-03-10,122.611053
+2026-03-11,122.568062
+2026-03-12,122.500838
+2026-03-13,122.435558

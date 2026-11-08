@@ -1,0 +1,273 @@
+{
+  "source": "FRED, Federal Reserve Bank of St. Louis",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=SP500,NASDAQ100,DJIA",
+  "series_urls": {
+    "SP500": "https://fred.stlouisfed.org/series/SP500",
+    "NASDAQ100": "https://fred.stlouisfed.org/series/NASDAQ100",
+    "DJIA": "https://fred.stlouisfed.org/series/DJIA"
+  },
+  "collected_at_utc": "2026-10-25T19:20:57.871467+00:00",
+  "requested_start": "2024-01-01",
+  "requested_end": "2026-10-23",
+  "first_complete_date": "2024-01-02",
+  "last_complete_date": "2026-10-21",
+  "common_observation_dates": 704,
+  "long_format_rows": 2112,
+  "series_mapping": {
+    "SP500": "SP500",
+    "NASDAQ100": "NASDAQ100",
+    "DJIA": "DOW"
+  },
+  "excluded_incomplete_dates": [
+    {
+      "date": "2024-01-01",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2024-01-15",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2024-02-19",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2024-03-29",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2024-05-27",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2024-06-19",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2024-07-04",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2024-09-02",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2024-11-28",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2024-12-25",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2025-01-01",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2025-01-09",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2025-01-20",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2025-02-17",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2025-04-18",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2025-05-26",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2025-06-19",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2025-07-04",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2025-09-01",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2025-11-27",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2025-12-25",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2026-01-01",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2026-01-19",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2026-02-16",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2026-04-03",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2026-06-19",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2026-07-03",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2026-09-07",
+      "missing_series": [
+        "SP500",
+        "NASDAQ100",
+        "DJIA"
+      ]
+    },
+    {
+      "date": "2026-10-22",
+      "missing_series": [
+        "SP500"
+      ]
+    },
+    {
+      "date": "2026-10-23",
+      "missing_series": [
+        "SP500"
+      ]
+    }
+  ],
+  "price_convention": "Daily market-close index levels, not dividend-adjusted total returns or ETFs",
+  "missing_data_policy": "Complete-case intersection of all three series; no filling or interpolation",
+  "calendar_limit": "Observed common dates; this script does not independently verify exchange holidays",
+  "source_sha256": "5fb989464ee2c76e36ea1955d3d450aa8aa1ae0ca66d5199ca1b053fc7a44530",
+  "clean_sha256": "11ae3675f47ccbb4647c32e880d052bbecde587770e4830ee3a366c5f2ea0740",
+  "rights": "Third-party index data. FRED series mark copyrighted/pre-approval required. Public repository includes retrieval code and links, not observed prices or price-containing prompts."
+}

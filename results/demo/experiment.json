@@ -1,0 +1,24 @@
+{
+  "created_at_utc": "2026-10-01T01:50:57.629292+00:00",
+  "prices_path": "/workspace/scratch/cddc3844de9c/Group46_Index_Return_Project/results/demo/synthetic_prices.csv",
+  "prices_sha256": "c90ee477dba8aaf6eed51de1c41123938435cbbaf7b71ff3690d33afb9e4328a",
+  "prompts_sha256": "c8be9e9e86e69441298bcccd9763804038e597a8c0ea02705d7262f1554f31cf",
+  "split": "test",
+  "horizons": [
+    3,
+    5,
+    10
+  ],
+  "lookback": 20,
+  "step": 10,
+  "case_count": 63,
+  "required_models": [
+    "ChatGPT",
+    "Claude",
+    "Gemini",
+    "Copilot"
+  ],
+  "synthetic_demo": true,
+  "split_rule": "chronological 70/20/10 of trading dates; origin and target inside split",
+  "source_metadata_file": "data/DATA_SOURCE.md"
+}
