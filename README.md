@@ -1,14 +1,14 @@
 # Real market data is now available
 
 Run `python scripts/download_market_data.py` to retrieve the dataset locally.
-The verified collection contains **704 common dates and 2,112 index observations**,
+The archived collection manifest records **704 common dates and 2,112 index observations**,
 from **2024-01-02 through 2026-10-21**, across S&P 500, Nasdaq-100, and Dow.
 Requested end date: 2026-10-23. Later incomplete dates are excluded.
 
 See [data sources](data/DATA_SOURCE.md), [quick start](QUICK_START.md), and
 [research status](RESEARCH_STATUS.md). The public source package includes a downloader
-and provenance manifest. Observed prices and price-containing prompts remain local
-because FRED's index providers restrict redistribution.
+and provenance manifest. The submitted files in `splits/` contain **706 common
+trading dates and 2,118 rows**. See the data-source notes for redistribution terms.
 
 # DS340W Group 46 — Stock-index return forecast comparison
 
@@ -113,9 +113,21 @@ horizons need a suitable dependent-data analysis before claims about model super
 - `src/project.py`: complete command-line workflow and documented functions.
 - `tests/test_project.py`: calculation, split, leakage, integrity, and completeness tests.
 - `QUICK_START.md`: Windows-friendly setup and run commands.
-- `CODE_EXPLANATION.md`: plain-language walkthrough for presenting the code.
-- `CHECKIN_EVIDENCE.txt`: actual test/demo verification recorded for this package.
 - `results/demo/`: generated toy results and graphs for a working demonstration.
 - `data/prices_template.csv`: header-only template; not real market data.
 
 The previous starter remains unchanged. This package is a separate expanded version.
+
+## Novel forecasting experiment
+
+Run `py novel_market_demo.py` on Windows (or `python3 novel_market_demo.py`).
+The experiment compares zero return and full momentum against two damped
+momentum rules that use 25% or 50% of the previous same-horizon return. It uses
+the committed training split for past context and scores all rules on the same
+cases in the committed working test split. The validation file stays held out.
+
+See the [comparison table](results/novel_momentum/REPORT.md) and
+[per-horizon metrics](results/novel_momentum/metrics_by_horizon.csv).
+The older real-baseline report is a separate run. Use the new table for a
+like-for-like comparison. This experiment evaluates statistical rules on the
+three index series.

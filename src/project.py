@@ -18,13 +18,13 @@ ASSISTANTS = ('ChatGPT', 'Claude', 'Gemini', 'Copilot')
 BASELINES = ('Zero baseline', 'Momentum baseline')
 
 
-def write_csv(path, rows, fields=None):
+def write_csv(path, rows, fields=None, *, lineterminator="\r\n"):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     if fields is None:
         fields = list(rows[0])
     with path.open('w', newline='', encoding='utf-8') as f:
-        writer = csv.DictWriter(f, fieldnames=fields)
+        writer = csv.DictWriter(f, fieldnames=fields, lineterminator=lineterminator)
         writer.writeheader()
         writer.writerows(rows)
 
@@ -87,13 +87,33 @@ def make_cases(prices, split='test', horizons=(3,5,10), lookback=20, step=10,
         raise ValueError('Validation is held out. Use --unlock-validation only after the protocol is fixed.')
     if split not in ('train', 'test', 'validation'):
         raise ValueError('Unknown split')
+    series = read_prices(prices)
+    dates = [d for d, _ in next(iter(series.values()))]
+    start, end = partitions(dates)[split]
+    return _cases_for_period(series, split, start, end, horizons, lookback, step)
+
+
+def make_test_cases(train_prices, test_prices, horizons=(3,5,10), lookback=20, step=10):
+    """Use the submitted test period, with training closes available as past context."""
+    train = read_prices(train_prices)
+    test = read_prices(test_prices)
+    if train.keys() != test.keys():
+        raise ValueError('Train and test must contain the same indexes.')
+    train_dates = next(iter(train.values()))
+    test_dates = next(iter(test.values()))
+    if train_dates[-1][0] >= test_dates[0][0]:
+        raise ValueError('All training dates must precede the test dates.')
+    series = {index: train[index] + test[index] for index in train}
+    start = len(train_dates)
+    return _cases_for_period(series, 'test', start, start + len(test_dates),
+                             horizons, lookback, step)
+
+
+def _cases_for_period(series, split, start, end, horizons, lookback, step):
     if not horizons or min(horizons) < 1 or lookback < max(horizons)+1 or step < 1:
         raise ValueError('Horizons/step must be positive; lookback must exceed every horizon.')
     if len(set(horizons)) != len(horizons):
         raise ValueError('Duplicate horizons')
-    series = read_prices(prices)
-    dates = [d for d, _ in next(iter(series.values()))]
-    start, end = partitions(dates)[split]
     cases = []
     # The origin AND target must lie within the selected split. This purges
     # boundary-spanning labels. Past-only histories can cross earlier boundaries.
@@ -191,6 +211,10 @@ def evaluate(cases, predictions, required_models, require_metadata=True):
         raise ValueError(f'Incomplete comparison: missing {len(expected-seen)} forecasts. Complete every model/case.')
     for c in cases:
         rows.extend([(c,BASELINES[0],0.),(c,BASELINES[1],c['momentum_baseline_pct'])])
+    return score_forecasts(rows)
+
+
+def score_forecasts(rows):
     details = []
     for c,m,p in rows:
         actual = c['_actual_pct']
