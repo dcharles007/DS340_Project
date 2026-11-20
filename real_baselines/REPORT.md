@@ -23,5 +23,3 @@ From the project folder on Windows, run:
 py scripts/download_market_data.py
 py real_market_demo.py
 ```
-
-Source: FRED daily closing series SP500, NASDAQ100, and DJIA. The input CSV stays local.
